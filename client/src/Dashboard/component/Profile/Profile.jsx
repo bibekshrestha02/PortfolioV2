@@ -10,7 +10,7 @@ function Profile(props) {
     return new Auth().logOut() ? props.history.push("/") : null;
   };
   useEffect(() => {
-    Axios.get("/").then((res) => {
+    Axios.get("/api/").then((res) => {
       const { data } = res.data;
       const { photo } = data;
       setPhoto(photo);
@@ -21,7 +21,7 @@ function Profile(props) {
     form.append("profile", fileData);
     const status = window.confirm("Are You sure?");
     if (status) {
-      Axios.put("/", form, {
+      Axios.put("/api/", form, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
