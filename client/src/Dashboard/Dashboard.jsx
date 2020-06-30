@@ -65,7 +65,7 @@ function Dashboard() {
   };
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    Axios.get("/").then((res) => {
+    Axios.get("/api/").then((res) => {
       const { data } = res.data;
       const { about } = data;
       const { introDetails } = data;
