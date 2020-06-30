@@ -1,0 +1,31 @@
+.landingPage {
+  height: 100vh;
+  /* Background image */
+  background-image: url("/Images/landingImage.jpg");
+  /* Full-screen */
+
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: white;
+  /* Add a font */
+  .heroText {
+    padding-top: 30vh;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    @media screen and (max-width: "400px") {
+      font-size: 30px;
+      padding-top: 40vh;
+    }
+    .button {
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

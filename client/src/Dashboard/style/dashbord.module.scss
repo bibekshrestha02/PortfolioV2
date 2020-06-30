@@ -1,0 +1,15 @@
+@import "./../../style/color";
+.Dashboard {
+  width: 80vw;
+  margin: auto;
+  height: auto;
+  padding-bottom: 30px;
+  .secChild {
+    height: 100vh;
+    overflow: scroll;
+    background-color: white;
+  }
+  @media screen and (max-width: "400px") {
+    width: 100vw;
+  }
+}

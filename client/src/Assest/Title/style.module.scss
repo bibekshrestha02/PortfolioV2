@@ -1,0 +1,17 @@
+@import "./../../style/color";
+.line {
+  position: relative;
+  margin: auto;
+  width: 90px;
+  border: 2px solid $main;
+}
+.Title {
+  margin-top: 20px;
+  color: $main;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  @media screen and(max-width:"400px") {
+    font-size: 20px;
+  }
+}
