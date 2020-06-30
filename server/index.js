@@ -7,7 +7,7 @@ const contact = require("./router/contactRouter");
 const path = require("path");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 dotenv.config({ path: "./confing.env" });
 const DB = process.env.mogoosedb.replace("<password>", process.env.password);
 
@@ -35,6 +35,7 @@ app.use(express.json());
 app.use("/admin", auth);
 app.use("/api", details);
 app.use("/contact", contact);
+
 app.use(express.static("../client/build"));
 
 app.get("*", (req, res) => {
