@@ -108,7 +108,7 @@ function Dashboard() {
     };
     const status = window.confirm("Are you sure?");
     if (status) {
-      Axios.patch("/", data).then((res) => {
+      Axios.patch("/api/", data).then((res) => {
         window.location.reload();
       });
     }
