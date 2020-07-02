@@ -37,7 +37,11 @@ function Profile(props) {
     <div className={`${style.profile}`}>
       {/* image */}
       <div className='text-center pt-4'>
-        <img className={`${style.img}`} src={photo} alt='profile' />
+        <img
+          className={`${style.img}`}
+          src='/Images/profile.jpg'
+          alt='profile'
+        />
         <div className='row pt-3'>
           <div className='col-6'>
             <input
