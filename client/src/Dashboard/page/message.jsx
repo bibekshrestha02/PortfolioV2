@@ -9,12 +9,12 @@ export default function Message() {
     Axios.get("/contact").then((res) => {
       const { message } = res.data;
       console.log(res);
-      if (message.length < 1) {
+      if (message.length === 0) {
         setLoading(false);
         return setEmptyMessage(true);
       }
-      setEmptyMessage(false);
       setMessages(message);
+      setEmptyMessage(false);
       setLoading(false);
     });
   }, []);
@@ -38,7 +38,7 @@ export default function Message() {
   } else {
     data = (
       <div>
-        {emptyMessage
+        {!emptyMessage
           ? messages.map((message, i) => {
               return (
                 <div key={i} className='card mt-3 bg-light'>
