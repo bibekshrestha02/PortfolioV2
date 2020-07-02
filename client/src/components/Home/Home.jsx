@@ -4,7 +4,11 @@ export default function Home(props) {
   return (
     <div className={`${style.home}`}>
       <div>
-        <img src={props.image} className={` ${style.image}`} alt='profile' />
+        <img
+          src='/Images/profile.jpg'
+          className={` ${style.image}`}
+          alt='profile'
+        />
         <br />
         <span className={`${style.Name}`}>{props.name}</span>
         <br />
